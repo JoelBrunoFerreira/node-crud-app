@@ -1,5 +1,6 @@
 const express = require('express');
 const mongoose = require('mongoose');
+const dotenv = require('dotenv');
 const allergyRoute = require("./src/routes/allergy.route.js");
 const app = express();
 
@@ -18,7 +19,7 @@ app.use('/api/allergies', allergyRoute)
 
 
 // DB connection
-mongoose.connect ("mongodb+srv://joelferreira:*************@node-crud-app.ixyfu.mongodb.net/apidb?retryWrites=true&w=majority&appName=node-crud-app")
+mongoose.connect (process.env.MONGODB_URI)
     .then (()  => {
         console.log('Connected to MongoDB');
     })

@@ -1,3 +1,3 @@
-# node-crud-app
+# Node CRUD app
 
-## Built with node, express and mondoDB
+## Built with Node.js, Express.js and MongoDB
